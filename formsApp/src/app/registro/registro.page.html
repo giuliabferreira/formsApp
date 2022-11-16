@@ -10,8 +10,13 @@
 <br>
 <br>
 <br>
-    
+
 <ion-card>
+  <ion-card-header>
+  <ion-card-title>
+    FICHA DE REGISTRO
+  </ion-card-title>
+</ion-card-header>
     <ion-card-content>
       <ion-grid>
         <ion-row>
@@ -34,6 +39,38 @@
           </ion-col>
 
         </ion-row>
+        <ion-row>
+
+          <ion-col>
+            <ion-item>
+              <ion-label>CPF:</ion-label>
+              <ion-input placeholder="***.***.***-**"></ion-input>
+            </ion-item>
+
+          </ion-col>
+
+        </ion-row>
+
+        <ion-row>
+
+          <ion-col>
+            <ion-item>
+              <ion-label>nome:</ion-label>
+              <ion-input placeholder="*******"></ion-input>
+            </ion-item>
+
+          </ion-col>
+
+        </ion-row>
+        <ion-button fill="clear">salvar</ion-button>
+
+        <ion-buttonf fill="outline">
+          <ion-item routerLink="/tabs/tab1">
+            voltar
+          </ion-item>
+
+       </ion-buttonf>
+
       </ion-grid>
     </ion-card-content>
   </ion-card>

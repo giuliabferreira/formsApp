@@ -3,3 +3,7 @@ ion-card{
 margin-left: 20% !important;
 margin-right: 20% !important;
 }
+ion-card-header {
+  display: flex;
+  flex-flow: column-reverse;
+}
