@@ -1,44 +1,68 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
     <ion-title>
-Página Inicial
+      Página Inicial
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
 
-
-
   <div class="ion-text-center">
-<ion-card>
-  <ion-card-header>
-    <img alt="Silhouette of mountains" src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE4Fd9x?ver=4725" />
 
-    <ion-card-title style="font-family: fantasy">Comece Agora</ion-card-title>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title style="font-family: fantasy">Olá!</ion-card-title>
+        <br>
+        <ion-img src="https://static.vecteezy.com/ti/vetor-gratis/t2/7229427-welcome-calligraphic-inscription-with-smooth-lines-vetor.jpg" alt=""></ion-img>
+        <br>
+        <ion-card-subtitle>Você quer fazer login, fazer um novo registro ou cadastrar um novo produto?
+        </ion-card-subtitle>
+      </ion-card-header>
+      <br>
+      <ion-card-content>
 
-    <ion-card-subtitle>Selecione uma das Opções Abaixo</ion-card-subtitle>
-   </ion-card-header>
-<ion-card-content>
-      <ion-button fill="clear">
-        <ion-item routerLink="/login">
-          Fazer Login
-        </ion-item>
+        <ion-button fill="clear">
+          <ion-item routerLink="/login">
+            Fazer Login
+          </ion-item>
+        </ion-button>
 
-     </ion-button>
+        <ion-button fill="clear">
+          <ion-item routerLink="/registro">
+            Fazer Registro
+          </ion-item>
+        </ion-button>
+
+        <ion-button fill="clear">
+          <ion-item routerLink="/produto">
+            Cadastrar Produto
+          </ion-item>
+        </ion-button>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
 
 
+  <ion-item-sliding *ngFor="let user of listaUsuarios">
 
-
-  <ion-button fill="clear">
-    <ion-item routerLink="/registro">
-      Fazer Registro
+    <ion-item>
+      <ion-label>
+        <div>
+          <h1>{{user.nome}}</h1>
+          <span style="float: right;">{{user.cpf}}</span>
+          <a href="mailto:{{user.email}}"> {{user.email}} </a>
+        </div>
+      </ion-label>
     </ion-item>
 
- </ion-button>
-</ion-card-content>
-</ion-card>
-</div>
+    <ion-item-options side="end">
+      <ion-item-option color="danger" (click)="excluirCadastro(user.email)">
+        <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+      </ion-item-option>
 
-
+    </ion-item-options>
+  </ion-item-sliding>
 </ion-content>
