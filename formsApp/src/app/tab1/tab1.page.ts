@@ -17,25 +17,29 @@ export class Tab1Page {
 
   async buscarUsuarios(){
     this.listaUsuarios = await this.storageService.getAll();
+    console.log(this.listaUsuarios);
   }
 
   async buscarProduto() {
     this.listaProdutos = await this.storageService.getAll();
-    console.log( this.listaProdutos);
+    console.log(this.listaProdutos);
   }
 
  async excluirCadastro(email: string) {
+  console.log(email);
   await this.storageService.remove(email);
   this.buscarUsuarios();
 }
 
 async excluirProduto(nome: string) {
+  console.log(nome);
   await this.storageService.remove(nome);
   this.buscarProduto();
 }
 
 ionViewDidEnter() {
   this.buscarUsuarios();
+  this.buscarProduto();
 }
 
 }
