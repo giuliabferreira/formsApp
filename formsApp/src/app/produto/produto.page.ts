@@ -39,15 +39,15 @@ export class ProdutoPage implements OnInit {
       ],
       descricao: [
         '',
-        Validators.compose([Validators.required, Validators.minLength(6)]),
+        Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
       validade: [
         '',
-        Validators.compose([Validators.required, Validators.minLength(7)]),
+        Validators.compose([Validators.required, Validators.maxLength(10)]),
       ],
       preco: [
         '',
-        Validators.compose([Validators.required, Validators.minLength(8)]),
+        Validators.compose([Validators.required, Validators.minLength(3)]),
       ],
     });
   }

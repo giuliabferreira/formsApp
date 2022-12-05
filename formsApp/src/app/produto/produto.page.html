@@ -10,6 +10,7 @@
 
 <ion-content>
   <form [formGroup]="formProduto">
+
     <ion-card>
       <ion-card-content>
         <ion-item>
@@ -27,7 +28,6 @@
 
         <ion-item>
           <ion-label position="floating">Descrição</ion-label>
-
           <ion-input formControlName="descricao"></ion-input>
           <ng-container *ngFor="let erro of mensagens.descricao">
             <span
@@ -72,5 +72,6 @@
 
       </ion-card-content>
     </ion-card>
+
   </form>
 </ion-content>
